@@ -1,0 +1,25 @@
+{
+  "name": "comics",
+  "description": "A very nice comics app",
+  "main": "index.js",
+  "authors": [
+    "James Garzón Otálvaro"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "comics",
+    "pragma"
+  ],
+  "homepage": "https://github.com/jamesgarzon/comics",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular-materialize": "^0.2.1"
+  }
+}
