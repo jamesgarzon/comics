@@ -10,7 +10,12 @@
             .state('login', {
               url: '/login',
               template: '<login></login>'
-            });
+            })
+            .state('home', {
+              url: '/',
+              template: '<home></home>'
+            })
+
         });
 
 })();

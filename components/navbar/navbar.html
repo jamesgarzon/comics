@@ -1,18 +1,17 @@
-<nav>
+<nav class="orange">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Logo</a>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <a href="#!" class="brand-logo">ComicApp</a>
+    <a href="#" class="button-collapse" data-activates="mobile-nav" data-sidenav="left" data-menuwidth="500" data-closeonclick="false"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
+      <li><a ui-sref="login">login</a></li>
+      <li><a ui-sref="register-employee">Registrar empleados</a></li>
+      <li><a ui-sref="comics">comics</a></li>
+      <li><a ui-sref="comics">Salir</a></li>
+
     </ul>
-    <ul class="side-nav" id="mobile-demo">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
+    <ul class="side-nav" id="mobile-nav">
+
+
     </ul>
   </div>
 </nav>

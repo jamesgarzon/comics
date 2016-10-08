@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('erpApp')
+  angular.module('comicsApp')
     .directive('navbar', () => ({
       templateUrl: 'components/navbar/navbar.html',
       restrict: 'E',
