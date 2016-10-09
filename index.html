@@ -2,9 +2,46 @@
 <html>
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
     <title></title>
   </head>
   <body>
     <h1>HOLA MUNDO</h1>
+=======
+    <title>Comics</title>
+    <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="app/app.css"/>
+
+  </head>
+  <body ng-app="comicsApp">
+    <navbar></navbar>
+    <div ui-view=""></div>
+    <footer></footer>
+
+    <!-- libraries -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/materialize/bin/materialize.js"></script>
+    <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
+
+    <!-- config -->
+    <script type="text/javascript" src="app/app.js"></script>
+
+    <!-- controllers -->
+    <script type="text/javascript" src="app/login/login.controller.js"></script>
+    <script type="text/javascript" src="components/navbar/navbar.controller.js"></script>
+
+    <!-- directives -->
+    <script type="text/javascript" src="components/navbar/navbar.directive.js"></script>
+
+    <!-- services -->
+    <script type="text/javascript" src="services/auth.service.js"></script>
+
+
+    <!-- components -->
+
+>>>>>>> 60357b69dcefa5632a5923749ceb09956e65577d
   </body>
 </html>
