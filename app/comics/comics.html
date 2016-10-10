@@ -14,7 +14,7 @@
 
 <!-- lista de comics -->
 <div class="row">
-  <div class="col s12 m6 l4" ng-repeat="comic in vm.comics | limitTo:vm.limit | filter:vm.filter(vm.filterTitle) track by $index">
+  <div class="col s12 m6 l4" ng-repeat="comic in vm.comics |  filter:vm.filter(vm.filterTitle)| limitTo:vm.limit track by $index">
     <div class="card">
       <a href="#detailComicModal"  modal ng-click="vm.selectComic(comic)">
         <div class="card-image">
