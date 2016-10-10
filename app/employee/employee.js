@@ -5,9 +5,9 @@
   .module('comicsApp')
   .config(function ($stateProvider){
     $stateProvider
-    .state('login', {
-      url: '/login',
-      template: '<login></login>'
+    .state('employee', {
+      url: '/employee',
+      template: '<employee></employee>'
     });
   });
 

@@ -10,7 +10,6 @@
     return {
       list:  list,
       create: create
-      // editComic: logout
     };
 
     function list() {
@@ -33,9 +32,5 @@
       });
     }
 
-
-    // function logout() {
-    //   $window.localStorage.removeItem('isLogged');
-    // }
   }
 })();

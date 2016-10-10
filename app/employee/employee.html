@@ -1,0 +1,28 @@
+<div class="container">
+
+<h1 class="center-align">Empleados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Teléfono</th>
+      <th>Dirección</th>
+      <th>Fecha de nacimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="employee in vm.employees">
+      <td>{{employee.username}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.lastname}}</td>
+      <td>{{employee.phone}}</td>
+      <td>{{employee.address}}</td>
+      <td>{{employee.birthday | date}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
