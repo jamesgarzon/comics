@@ -44,7 +44,7 @@
 
 <!-- lista de comics -->
 <div class="row">
-  <div class="col s12 m6 l4" ng-repeat="comic in vm.comics | filter:vm.filter(vm.filterTitle) track by $index">
+  <div class="col s12 m6 l4" ng-repeat="comic in vm.comics | limitTo:vm.limit | filter:vm.filter(vm.filterTitle) track by $index">
     <div class="card">
       <a href="#detailComicModal"  modal ng-click="vm.selectComic(comic)">
         <div class="card-image">
@@ -53,6 +53,9 @@
         </div>
       </a>
     </div>
+  </div>
+  <div class="center-align" ng-if="vm.comics.length>9 && vm.comics.length>vm.limit">
+    <a href="" class="btn btn-flat " ng-click="vm.increaseComicsNumber(6)">Cargar mas <i class="material-icons right">autorenew</i></a>
   </div>
 </div>
 

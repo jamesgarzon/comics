@@ -6,6 +6,7 @@
     constructor($window, Comic) {
       this.Comic = Comic;
       this.$window = $window;
+      this.limit = 9;
 
       $('.modal-trigger').leanModal();
       this.comments = [{
@@ -107,7 +108,10 @@
       this.$window.localStorage.comics = String(JSON.stringify(this.comics));
       $('#editComicModal').closeModal();
       $('#detailComicModal').openModal();
+    }
 
+    increaseComicsNumber(){
+      this.limit += 6;
     }
 
   }
