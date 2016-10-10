@@ -6,15 +6,9 @@
       this.Auth = Auth;
     }
 
-    // $onInit(){
-    //
-    // }
-
-
     login(user){
       this.Auth.login(user);
     }
-
 
   }
 

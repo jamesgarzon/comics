@@ -1,41 +1,41 @@
 <div class="container z-depth-2">
 
-<h1 class="center-align">Empleados</h1>
+  <h1 class="center-align">Empleados</h1>
 
-<!-- filtros -->
-<div class="row">
-  <div class="input-field col m10 offset-m1">
-    <i class="material-icons prefix">search</i>
-    <input id="filter" type="text" ng-model="vm.filter" />
-    <label for="filter">Búsqueda</label>
+  <!-- filtros -->
+  <div class="row">
+    <div class="input-field col m10 offset-m1">
+      <i class="material-icons prefix">search</i>
+      <input id="filter" type="text" ng-model="vm.filter" />
+      <label for="filter">Búsqueda</label>
+    </div>
   </div>
-</div>
 
-<!-- tabla donde se listan los empleados -->
-<table class="responsive-table">
-  <thead>
-    <tr>
-      <th>Usuario</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Teléfono</th>
-      <th>Dirección</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="employee in vm.employees |filter:vm.filter track by $index">
-      <td>{{employee.username}}</td>
-      <td>{{employee.name}}</td>
-      <td>{{employee.lastname}}</td>
-      <td>{{employee.phone}}</td>
-      <td>{{employee.address}}</td>
-      <td>{{employee.email}}</td>
-    </tr>
-  </tbody>
-</table>
+  <!-- tabla donde se listan los empleados -->
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>Usuario</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Teléfono</th>
+        <th>Dirección</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="employee in vm.employees |filter:vm.filter track by $index">
+        <td>{{employee.username}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.lastname}}</td>
+        <td>{{employee.phone}}</td>
+        <td>{{employee.address}}</td>
+        <td>{{employee.email}}</td>
+      </tr>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 </div>
 <br>
 

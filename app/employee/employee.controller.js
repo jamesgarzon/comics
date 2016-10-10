@@ -13,7 +13,6 @@
       this.list();
     }
 
-
     // Llama el servicio de listar empleados para traerlos a la vista
     list(){
       this.Employee.list()
@@ -31,33 +30,33 @@
     createEmployee(newEmployee){
       if (this.checkPassword(newEmployee.password)) {
 
-      this.Employee.create(newEmployee)
-      .then(employee=>{
-        this.addEmployeeLocalStore(newEmployee);
-        Materialize.toast('Se ha creado el empleado correctamente', 5000);
-        $('#newEmployeeModal').closeModal();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    }
-
+        this.Employee.create(newEmployee)
+        .then(employee=>{
+          this.addEmployeeLocalStore(newEmployee);
+          Materialize.toast('Se ha creado el empleado correctamente', 5000);
+          $('#newEmployeeModal').closeModal();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      }
     }
 
     // Agrega un empleado al localStorage
     addEmployeeLocalStore(newEmployee){
       this.employees.push({
-          username: newEmployee.username,
-          password: newEmployee.password,
-          name: newEmployee.name,
-          lastname: newEmployee.lastname,
-          phone: newEmployee.phone,
-          address: newEmployee.address,
-          email: newEmployee.email
-        });
+        username: newEmployee.username,
+        password: newEmployee.password,
+        name: newEmployee.name,
+        lastname: newEmployee.lastname,
+        phone: newEmployee.phone,
+        address: newEmployee.address,
+        email: newEmployee.email
+      });
       this.$window.localStorage.employees = String(JSON.stringify(this.employees));
     }
 
+    // Valida las condiciones para una contraseña válida
     checkPassword(password){
       let check = true;
       if (!this.hasMayus(password)) {
@@ -75,16 +74,19 @@
       return check;
     }
 
+    // Valida que la contraseña tenga por lo menos una letra mayúscula
     hasMayus(password){
       let mayus = new RegExp('[A-Z]');
       return mayus.test(password);
     }
 
+    // Valida que la contraseña tenga por lo menos dos números
     hasTwoNumbers(password){
       let number = new RegExp('[0-9]{2}');
       return number.test(password);
     }
 
+    // Valida que la contraseña tenga por lo menos un caracter especial
     hasSpecialChars(password){
       let specialChar = new RegExp('\\W');
       return specialChar.test(password);
