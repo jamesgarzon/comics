@@ -1,59 +1,126 @@
-[
-  {
-    "id": "ironman",
-    "name": "IRON MAN",
-    "company": "MARVEL",
-    "author": "STAN LEE",
-    "description": "Anthony Edward \"Tony\" Stark o mejor conocido como El Hombre de Hierro u originalmente Iron Man, es un superhéroe que aparece en los cómics publicados por Marvel Comics. El personaje fue creado por el guionista y editor Stan Lee, desarrollado por el guionista Larry Lieber, y diseñado por los artistas Don Heck , Jack Kirby y Adrian Alvarez . Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963)."
-  },
-  {
-    "id": "batman",
-    "name": "BATMAN",
-    "company": "DC",
-    "author": "Bob Kane y Bill Finger",
-    "description": "Batman (conocido inicialmente como The Bat-Man) es un personaje creado por los estadounidenses Bob Kane y Bill Finger, y propiedad de DC Comics. Apareció por primera vez en la historia titulada «El caso del sindicato químico» de la revista Detective Comics n.º 27, lanzada por la editorial National Publications en mayo de 1939."
-  },
-  {
-    "id": "ironman3",
-    "name": "IRON MAN",
-    "company": "MARVEL",
-    "author": "STAN LEE",
-    "description": "Anthony Edward \"Tony\" Stark o mejor conocido como El Hombre de Hierro u originalmente Iron Man, es un superhéroe que aparece en los cómics publicados por Marvel Comics. El personaje fue creado por el guionista y editor Stan Lee, desarrollado por el guionista Larry Lieber, y diseñado por los artistas Don Heck , Jack Kirby y Adrian Alvarez . Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963)."
-  },
-  {
-    "id": "ironman4",
-    "name": "IRON MAN",
-    "company": "MARVEL",
-    "author": "STAN LEE",
-    "description": "Anthony Edward \"Tony\" Stark o mejor conocido como El Hombre de Hierro u originalmente Iron Man, es un superhéroe que aparece en los cómics publicados por Marvel Comics. El personaje fue creado por el guionista y editor Stan Lee, desarrollado por el guionista Larry Lieber, y diseñado por los artistas Don Heck , Jack Kirby y Adrian Alvarez . Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963)."
-  },
-  {
-    "id": "ironman5",
-    "name": "IRON MAN",
-    "company": "MARVEL",
-    "author": "STAN LEE",
-    "description": "Anthony Edward \"Tony\" Stark o mejor conocido como El Hombre de Hierro u originalmente Iron Man, es un superhéroe que aparece en los cómics publicados por Marvel Comics. El personaje fue creado por el guionista y editor Stan Lee, desarrollado por el guionista Larry Lieber, y diseñado por los artistas Don Heck , Jack Kirby y Adrian Alvarez . Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963)."
-  },
-  {
-    "id": "ironman7",
-    "name": "IRON MAN",
-    "company": "MARVEL",
-    "author": "STAN LEE",
-    "description": "Anthony Edward \"Tony\" Stark o mejor conocido como El Hombre de Hierro u originalmente Iron Man, es un superhéroe que aparece en los cómics publicados por Marvel Comics. El personaje fue creado por el guionista y editor Stan Lee, desarrollado por el guionista Larry Lieber, y diseñado por los artistas Don Heck , Jack Kirby y Adrian Alvarez . Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963)."
-  },
-  {
-    "id": "ironman9",
-    "name": "IRON MAN",
-    "company": "MARVEL",
-    "author": "STAN LEE",
-    "description": "Anthony Edward \"Tony\" Stark o mejor conocido como El Hombre de Hierro u originalmente Iron Man, es un superhéroe que aparece en los cómics publicados por Marvel Comics. El personaje fue creado por el guionista y editor Stan Lee, desarrollado por el guionista Larry Lieber, y diseñado por los artistas Don Heck , Jack Kirby y Adrian Alvarez . Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963)."
-  },
-  {
-    "id": "ironman88",
-    "name": "IRON MAN",
-    "company": "MARVEL",
-    "author": "STAN LEE",
-    "description": "Anthony Edward \"Tony\" Stark o mejor conocido como El Hombre de Hierro u originalmente Iron Man, es un superhéroe que aparece en los cómics publicados por Marvel Comics. El personaje fue creado por el guionista y editor Stan Lee, desarrollado por el guionista Larry Lieber, y diseñado por los artistas Don Heck , Jack Kirby y Adrian Alvarez . Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963)."
-  }
-
+[{
+  "id": "ironman",
+  "name": "IRON MAN",
+  "company": "MARVEL",
+  "author": "STAN LEE",
+  "description": "Anthony Edward \"Tony\" Stark o mejor conocido como El Hombre de Hierro u originalmente Iron Man, es un superhéroe que aparece en los cómics publicados por Marvel Comics. El personaje fue creado por el guionista y editor Stan Lee, desarrollado por el guionista Larry Lieber, y diseñado por los artistas Don Heck , Jack Kirby y Adrian Alvarez . Hizo su primera aparición en Tales of Suspense #39 (marzo de 1963)."
+},{
+  "id": "batman",
+  "name": "BATMAN",
+  "company": "DC",
+  "author": "Bob Kane y Bill Finger",
+  "description": "Batman (conocido inicialmente como The Bat-Man) es un personaje creado por los estadounidenses Bob Kane y Bill Finger, y propiedad de DC Comics. Apareció por primera vez en la historia titulada «El caso del sindicato químico» de la revista Detective Comics n.º 27, lanzada por la editorial National Publications en mayo de 1939."
+},
+{
+  "id": "hulk",
+  "name": "HULK",
+  "company": "MARVEL",
+  "author": "Stan Lee y Jack Kirby",
+  "description": "En todas sus apariciones, Hulk es retratado como un ser de forma humanoide de piel verde que posee una fuerza, resistencia y velocidad sobrehumanas casi ilimitadas, además de poseer un factor de curación y regeneración sumamente eficientes los cuales incrementan su poder a medida que su furia aumenta."
+},
+{
+  "id": "capitanamerica",
+  "name": "CAPITÁN AMÉRICA",
+  "company": "MARVEL",
+  "author": "Joe Simon y Jack Kirby",
+  "description": "El Capitán América fue diseñado como un supersoldado patriota que luchaba frecuentemente contra las potencias del Eje en la Segunda Guerra Mundial, y fue el personaje más popular de Timely Comics durante el período de guerra. La popularidad de superhéroes se desvaneció después de la guerra, y el cómic del Capitán América fue discontinuado en 1950, con un breve resurgimiento en 1953."
+},
+{
+  "id": "spiderman",
+  "name": "SPIDER-MAN",
+  "company": "MARVEL",
+  "author": "Stan Lee y Steve Ditko",
+  "description": "Lee y Ditko lo concibieron como un huérfano criado por su tío Ben y su tía May. Al ser adolescente, tiene que lidiar con todos los problemas típicos de un joven de su edad además de enfrentarse a los criminales con un disfraz rojo y azul. Entre sus superpoderes se encuentra una gran agilidad y flexibilidad, así como la capacidad de aferrarse a la mayoría de superficies. Además logró crear unos lanzatelarañas o lanzarredes."
+},
+{
+  "id": "drstrange",
+  "name": "DR. STRANGE",
+  "company": "MARVEL",
+  "author": "Stan Lee y Steve Ditko",
+  "description": "Doctor Strange es un personaje ficticio de historieta, un mago y superhéroe de Marvel Comics. Creado por el escritor y editor Stan Lee y el dibujante Steve Ditko, apareció por primera vez en el número 110 de Strange Tales."
+},
+{
+  "id": "silversurfer",
+  "name": "SILVER SURFER",
+  "company": "MARVEL",
+  "author": "Jack Kirby y Stan Lee",
+  "description": "Silver Surfer (también conocido en España como Estela Plateada, y en Hispanoamérica como Surfista de Plata, El Surfista Plateado o Deslizador Plateado) es un personaje ficticio de cómic del Universo Marvel creado por Jack Kirby y Stan Lee. Su primera aparición fue en Los 4 Fantásticos N° 48 (marzo de 1966)."
+},
+{
+  "id": "galactus",
+  "name": "GALACTUS",
+  "company": "MARVEL",
+  "author": "Stan Lee y Jack Kirby",
+  "description": "Galactus es un personaje ficticio que aparece en las publicaciones de Marvel Comics, creado por los historietistas Stan Lee y Jack Kirby. Su primera aparición fue en marzo de 1966 en el número 48 de Fantastic Four."
+},
+{
+  "id": "superman",
+  "name": "SUPERMAN",
+  "company": "DC",
+  "author": "Jerry Siegel y Joe Shuster",
+  "description": "La historia original de Superman relata que nació con el nombre de Kal-El en el planeta Krypton; su padre, el científico Jor-El, y su madre Lara Lor-Van, lo enviaron en una nave espacial con destino a la Tierra cuando era un niño, momentos antes de la destrucción de su planeta."
+},
+{
+  "id": "flash",
+  "name": "FLASH",
+  "company": "DC",
+  "author": "Gardner Fox y Harry Lampert",
+  "description": "El Flash original apareció por primera vez en Flash Comics #1 (enero de 1940). Todas las encarnaciones de Flash poseen súper velocidad, que incluye la habilidad de correr y moverse extremadamente rápido, gran fuerza, usar reflejos sobrehumanos, y aparentemente violar ciertas leyes de la física."
+},
+{
+  "id": "linternaverde",
+  "name": "LINTERNA VERDE",
+  "company": "DC",
+  "author": " Bill Finger y Martin Nodell",
+  "description": "Linterna Verde es el alias de varios superhéroes de la ficción del Universo DC, los cuales se caracterizan por un anillo de poder y la capacidad de crear manifestaciones de luz sólida con los susodichos anillos."
+},
+{
+  "id": "aquaman",
+  "name": "AQUAMAN",
+  "company": "DC",
+  "author": "Paul Norris y Mort Weisinger",
+  "description": "Aquaman es un personaje ficticio y un superhéroe que protagoniza muchos títulos de cómics publicados por DC Comics. Creado por Paul Norris y Mort Weisinger, el personaje debutó en More Fun Comics, #73. Aquaman, una persona seria y melancólica, cargado con una mala reputación y luchando para encontrar su verdadero papel y propósito más allá de su lado público como un rey depuesto y un héroe caído."
+},
+{
+  "id": "joker",
+  "name": "JOKER",
+  "company": "DC",
+  "author": " Jerry Robinson, Bill Finger y Bob Kane",
+  "description": "El Joker (conocido como el Guasón en Hispanoamérica) es un personaje ficticio, un supervillano que aparece en los cómics publicados por la editorial estadounidense DC Comics. Su nombre en español quiere decir Bromista, aunque también hace referencia a un naipe de la baraja inglesa, equivalente al comodín."
+},
+{
+  "id": "wonderwoman",
+  "name": "WONDER WOMAN",
+  "company": "DC",
+  "author": "William Moulton Marston y Sadie Holloway Marston",
+  "description": "La Mujer Maravilla (en inglés: Wonder Woman) es una superheroína ficticia creada por William Moulton Marston para la editorial DC Comics. El personaje es una princesa guerrera de las amazonas (basado en la mitológica raza de las amazonas de la mitología griega) y es conocida en su tierra natal como la princesa Diana de Themyscira."
+},
+{
+  "id": "harleyquinn",
+  "name": "HARLEY QUINN",
+  "company": "DC",
+  "author": "Paul Dini y Bruce Timm",
+  "description": "Es una supervillana ficticia que aparece en cómics estadounidenses publicados por DC Comics, comúnmente como un adversario del superhéroe Batman. El personaje es una frecuente cómplice y novia del Joker, y una amiga cercana de la supervillana Hiedra Venenosa, de quien obtuvo una inmunidad a venenos y toxinas."
+},
+{
+  "id": "catwoman",
+  "name": "CATWOMAN",
+  "company": "DC",
+  "author": "Bill Finger y Bob Kane",
+  "description": "Catwoman era una ladrona de joyas, experta en disfrazarse y era conocida simplemente como La Gata. Con el pasar de los años fue evolucionando hasta convertirse en un personaje mucho más sensual y complejo, además de llevar un traje totalmente distinto."
+},
+{
+  "id": "shazam",
+  "name": "SHAZAM",
+  "company": "DC",
+  "author": "Bill Parker y Charles Beck",
+  "description": "Captain Marvel (traducido al español como Capitán Marvel o Capitán Maravilla) y desde 2011 Shazam es un superhéroe creado en 1939 por el guionista Bill Parker y el dibujante Clarence Charles Beck, originalmente publicado por Fawcett Comics en Whizz Comics 2 (feb. 1940) y posteriormente tras la compra de los derechos del personaje en 1972 y hasta la actualidad, por DC Comics."
+},
+{
+  "id": "blackwidow",
+  "name": "BLACK WIDOW",
+  "company": "MARVEL",
+  "author": "Stan Lee, Don Rico y Don Heck",
+  "description": "La Viuda Negra (\"Black Widow\" en inglés) es un personaje ficticio que pertenece a Marvel Comics. Dentro del Universo Marvel hay varias viudas negras, todas ellas pertenecen o han pertenecido a una organización espía rusa."
+}
 ]

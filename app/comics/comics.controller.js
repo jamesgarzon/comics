@@ -7,6 +7,28 @@
       this.Comic = Comic;
       this.$window = $window;
       this.$state = $state;
+
+      this.comments = [{
+          user: 'Antonio Machado',
+          content: 'Me encanta el capitulo donde derrota al malvado villano :3',
+          id: '001'
+        },{
+          user: 'Verónica Agudelo',
+          content: '  Mi heroe favorito <3',
+          id: '003'
+        },{
+          user: 'James Rodriguez',
+          content: 'El mejor de todos los tiempos ^_^',
+          id: '005'
+        },{
+          user: 'David Castro',
+          content: 'Me trae tantos recuerdos de mi niñez :\')',
+          id: '002'
+        }
+      ];
+
+
+
     }
 
     // llama las funciones listadas al cargar la vista

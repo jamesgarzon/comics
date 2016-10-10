@@ -28,15 +28,12 @@
   </ul>
 </div>
 
-<!-- title -->
+<!-- Titulo -->
 <div class="container">
   <h1  class="center-align">Comics</h1>
-  <!-- <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p> -->
 </div>
 
-<!-- filters -->
+<!-- filtros -->
 <div class="row">
   <div class="input-field col m10 offset-m1">
     <i class="material-icons prefix">search</i>
@@ -50,7 +47,7 @@
     <div class="card">
       <a href="#comicModal"  modal ng-click="vm.selectComic(comic)">
         <div class="card-image">
-          <img ng-src="assets/images/{{comic.id}}.jpg" height="250px">
+          <img ng-src="assets/images/comics/{{comic.id}}.jpg" height="250px">
           <span class="card-title"><b>{{comic.name}}</b></span>
         </div>
       </a>
@@ -59,7 +56,15 @@
 </div>
 
 
-<!-- Modal Structure -->
+<!-- Boton para añadir comics -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a href="#newComicModal"  modal class="btn-floating btn-large red modal-close waves-effect waves-light">
+    <i class="material-icons">add</i>
+  </a>
+</div>
+
+
+<!-- Modal de descripción -->
 <div id="comicModal" class="modal modal-fixed-footer">
   <div class="modal-content">
     <div class="row">
@@ -88,16 +93,14 @@
 
     <ul class="collection">
 
-      <li class="collection-item avatar">
-        <img src="assets/images/users/001.jpg" alt="" class="circle">
-        <span class="title"><b>Antonio Machado</b></span>
-        <p>
-          Me encanta el capitulo donde derrota al malvado villano :3
-        </p>
+      <li class="collection-item avatar" ng-repeat="comment in vm.comments">
+        <img ng-src="assets/images/users/{{comment.id}}.jpg" alt="" class="circle">
+        <span class="title"><b>{{comment.user}}</b></span>
+        <p>{{comment.content}}</p>
         <a href="#!" class="secondary-content"><i class="material-icons">sentiment_satisfied</i></a>
       </li>
 
-      <li class="collection-item avatar">
+      <!-- <li class="collection-item avatar">
         <img src="assets/images/users/003.jpg" alt="" class="circle">
         <span class="title"><b>Verónica Agudelo</b></span>
         <p>
@@ -113,7 +116,7 @@
           El mejor de todos los tiempos ^_^
         </p>
         <a href="#!" class="secondary-content"><i class="material-icons">sentiment_satisfied</i></a>
-      </li>
+      </li> -->
     </ul>
 
   </div>
