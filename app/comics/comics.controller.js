@@ -7,7 +7,7 @@
       this.Comic = Comic;
       this.$window = $window;
       this.$state = $state;
-
+      $('.modal-trigger').leanModal();
       this.comments = [{
           user: 'Antonio Machado',
           content: 'Me encanta el capitulo donde derrota al malvado villano :3',
@@ -26,9 +26,6 @@
           id: '002'
         }
       ];
-
-
-
     }
 
     // llama las funciones listadas al cargar la vista
@@ -66,6 +63,30 @@
         return ( item ) => {
           return regExp.test(item.name.toLowerCase());
       };
+    }
+
+    createComic(newComic){
+      newComic.id = 'default';
+      this.Comic.create(newComic)
+      .then(comic=>{
+        this.addComicLocalStore(newComic);
+        Materialize.toast('Se ha creado el comic correctamente', 5000);
+        $('#newComicModal').closeModal();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+
+    addComicLocalStore(newComic){
+      this.comics.push({
+          id: newComic.id,
+          name: newComic.name,
+          company: newComic.company,
+          author: newComic.author,
+          description: newComic.description
+        });
+      this.$window.localStorage.comics = String(JSON.stringify(this.comics));
     }
 
   }

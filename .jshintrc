@@ -55,6 +55,8 @@
 
     "globals": {
         "angular": false,
-        "$": false
+        "$": false,
+        "Materialize": false,
+        "alert": false
     }
 }

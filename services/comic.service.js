@@ -8,7 +8,8 @@
 
   function comicService($window, $http) {
     return {
-      list:  list
+      list:  list,
+      create: create
       // editComic: logout
     };
 
@@ -21,6 +22,17 @@
         return err;
       });
     }
+
+    function create(newComic) {
+      return $http.post('http://jsonplaceholder.typicode.com/posts', newComic)
+      .then(response=>{
+        return response.data;
+      })
+      .catch((err) => {
+        return err;
+      });
+    }
+
 
     // function logout() {
     //   $window.localStorage.removeItem('isLogged');
