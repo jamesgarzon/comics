@@ -14,11 +14,11 @@
             .state('home', {
               url: '/',
               template: '<home></home>'
-            })
-            .state('comics', {
-              url: '/comics',
-              template: '<comics></comics>'
             });
+            // .state('comics', {
+            //   url: '/comics',
+            //   template: '<comics></comics>'
+            // });
 
         });
 

@@ -1,0 +1,125 @@
+<!-- Slider -->
+<div class="slider" slider>
+  <ul class="slides">
+    <li>
+      <img src="assets/images/parallax9.jpg">
+      <div class="caption right-align">
+        <h3>LINTERNA VERDE</h3>
+      </div>
+    </li>
+    <li>
+      <img src="assets/images/parallax7.jpg">
+      <div class="caption left-align">
+        <h3>IRON MAN</h3>
+      </div>
+    </li>
+    <li>
+      <img src="assets/images/parallax8.jpg">
+      <div class="caption left-align">
+        <h3>BATMAN</h3>
+      </div>
+    </li>
+    <li>
+      <img src="assets/images/parallax10.jpg">
+      <div class="caption left-align">
+        <h3>SPIDERMAN</h3>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- title -->
+<div class="container">
+  <h1  class="center-align">Comics</h1>
+  <!-- <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p> -->
+</div>
+
+<!-- filters -->
+<div class="row">
+  <div class="input-field col m10 offset-m1">
+    <i class="material-icons prefix">search</i>
+    <input id="icon_prefix" type="text" class="validate" ng-model="vm.filterTitle" required />
+    <label for="icon_prefix">Búsqueda</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m6 l4" ng-repeat="comic in vm.comics | filter:vm.filter(vm.filterTitle)">
+    <div class="card">
+      <a href="#comicModal"  modal ng-click="vm.selectComic(comic)">
+        <div class="card-image">
+          <img ng-src="assets/images/{{comic.id}}.jpg" height="250px">
+          <span class="card-title"><b>{{comic.name}}</b></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="comicModal" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col m8 s12">
+        <img class="responsive-img" ng-src="assets/images/{{vm.selectedComic.id}}.jpg">
+      </div>
+      <div class="col m4 s12">
+        <h4>{{vm.selectedComic.name | uppercase}}</h4>
+        <p class="grey-text"><b>Editorial:</b> {{vm.selectedComic.company}}</p>
+        <p class="grey-text"><b>Por:</b> {{vm.selectedComic.author}}</p>
+        <span class="yellow-text"><i class="material-icons">star</i></span>
+        <span class="yellow-text"><i class="material-icons">star</i></span>
+        <span class="yellow-text"><i class="material-icons">star</i></span>
+        <span class="yellow-text"><i class="material-icons">star</i></span>
+        <span class="yellow-text"><i class="material-icons">star_half</i></span>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <p class="justify-text"> {{vm.selectedComic.description}} </p>
+
+  </div>
+  <div class="row">
+    <h5>Comentarios</h5>
+
+
+    <ul class="collection">
+
+      <li class="collection-item avatar">
+        <img src="assets/images/users/001.jpg" alt="" class="circle">
+        <span class="title"><b>Antonio Machado</b></span>
+        <p>
+          Me encanta el capitulo donde derrota al malvado villano :3
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">sentiment_satisfied</i></a>
+      </li>
+
+      <li class="collection-item avatar">
+        <img src="assets/images/users/003.jpg" alt="" class="circle">
+        <span class="title"><b>Verónica Agudelo</b></span>
+        <p>
+          Mi heroe favorito <3
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">sentiment_satisfied</i></a>
+      </li>
+
+      <li class="collection-item avatar">
+        <img src="assets/images/users/005.jpg" alt="" class="circle">
+        <span class="title"><b>James Rodriguez</b></span>
+        <p>
+          El mejor de todos los tiempos ^_^
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">sentiment_satisfied</i></a>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+<div class="modal-footer">
+  <a href="" class=" modal-action modal-close waves-effect waves-green btn-flat">Regresar</a>
+</div>
+</div>

@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  class OrdersComponent {
+  class LoginComponent {
     constructor(Auth, $window, $state) {
       this.Auth = Auth;
       this.$window = $window;
@@ -19,7 +19,7 @@
         this.user = user;
         this.$window.localStorage.isLogged = 'true';
         this.$window.localStorage.user = String(user);
-        
+
         this.$state.go('comics');
       });
     }
@@ -30,7 +30,7 @@
   angular.module('comicsApp')
   .component('login', {
     templateUrl: 'app/login/login.html',
-    controller: OrdersComponent,
+    controller: LoginComponent,
     controllerAs: 'vm'
   });
 

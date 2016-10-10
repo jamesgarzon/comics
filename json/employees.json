@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "username": "james",
+    "password": "james",
+    "name": "JAMES",
+    "lastname": "GARZÓN OTÁLVARO",
+    "phone": "554-55-67",
+    "address":  "CARRERA 15 # 34-67",
+    "birthday": "1994-11-05T13:15:30Z"
+  },
+  {
+    "id": 2,
+    "username": "admin",
+    "password": "admin",
+    "name": "ADMIN",
+    "lastname": "",
+    "phone": "555-55-55",
+    "address":  "CARRERA 15 # 34-67",
+    "birthday": "1996-10-07T13:15:30Z"
+  },
+
+]

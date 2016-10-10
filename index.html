@@ -2,16 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-<<<<<<< HEAD
-    <title></title>
-  </head>
-  <body>
-    <h1>HOLA MUNDO</h1>
-=======
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Comics</title>
     <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
+    <!-- custom css -->
     <link rel="stylesheet" href="app/app.css"/>
+    <link rel="stylesheet" href="app/comics/comics.css"/>
 
   </head>
   <body ng-app="comicsApp">
@@ -28,20 +26,24 @@
 
     <!-- config -->
     <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/comics/comics.js"></script>
+
 
     <!-- controllers -->
     <script type="text/javascript" src="app/login/login.controller.js"></script>
+    <script type="text/javascript" src="app/comics/comics.controller.js"></script>
     <script type="text/javascript" src="components/navbar/navbar.controller.js"></script>
 
     <!-- directives -->
     <script type="text/javascript" src="components/navbar/navbar.directive.js"></script>
+    <script type="text/javascript" src="components/footer/footer.directive.js"></script>
 
     <!-- services -->
     <script type="text/javascript" src="services/auth.service.js"></script>
+    <script type="text/javascript" src="services/comic.service.js"></script>
 
 
     <!-- components -->
 
->>>>>>> 60357b69dcefa5632a5923749ceb09956e65577d
   </body>
 </html>
