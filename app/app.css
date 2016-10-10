@@ -129,3 +129,10 @@
 .card-title{
   text-shadow: 2px 2px 8px #000;
 }
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}

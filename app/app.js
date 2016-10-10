@@ -5,13 +5,7 @@
   .module('comicsApp',['ui.materialize','ui.router'])
 
   .config(function ($stateProvider, $urlRouterProvider){
-    $urlRouterProvider.otherwise('/login');
-    $stateProvider
-    .state('home', {
-      url: '/',
-      template: '<home></home>',
-      authenticate: true
-    });
+    $urlRouterProvider.otherwise('/');
   })
   .run(function ($rootScope, $state, Auth) {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){

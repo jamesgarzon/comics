@@ -22,7 +22,7 @@
                 if (user.username === employee.username && user.password === employee.password) {
                   $window.localStorage.isLoggedIn = 'true';
                   $window.localStorage.user = String(user);
-                  $state.go('comics');
+                  $state.go('home');
                   Materialize.toast('Bienvenido(a) '+ user.username, 4000);
                   result = true;
                 }
@@ -38,7 +38,7 @@
               if (user.username === employee.username && user.password === employee.password) {
                 $window.localStorage.isLoggedIn = 'true';
                 $window.localStorage.user = String(user);
-                $state.go('comics');
+                $state.go('home');
                 Materialize.toast('Bienvenido(a) '+ user.username, 4000);
 
                 result = true;

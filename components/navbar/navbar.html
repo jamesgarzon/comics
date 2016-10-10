@@ -4,16 +4,16 @@
     <a href="#" class="button-collapse" data-activates="mobile-nav" data-sidenav="left" data-menuwidth="300" data-closeonclick="true"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li><a ui-sref="login">login</a></li>
-      <li><a ui-sref="employee">Empleados</a></li>
+      <li><a ui-sref="employees">Empleados</a></li>
       <li><a ui-sref="comics">comics</a></li>
       <li><a ui-sref="comics" ng-click="nav.logout();">Salir</a></li>
 
     </ul>
     <ul class="side-nav" id="mobile-nav">
       <li><a ui-sref="login">login</a></li>
-      <li><a ui-sref="employee">Empleados</a></li>
+      <li><a ui-sref="employees">Empleados</a></li>
       <li><a ui-sref="comics">comics</a></li>
-      <li><a ui-sref="comics" ng-click="nav.logout();">Salir</a></li>
+      <li><a ng-click="nav.logout();">Salir</a></li>
 
     </ul>
   </div>

@@ -93,7 +93,7 @@
   }
 
   angular.module('comicsApp')
-  .component('employee', {
+  .component('employees', {
     templateUrl: 'app/employee/employee.html',
     controller: EmployeeComponent,
     controllerAs: 'vm'
