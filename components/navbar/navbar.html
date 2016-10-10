@@ -1,22 +1,22 @@
 <nav class="orange">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Comics/a>
+    <a href="#!" class="brand-logo">Comics</a>
     <a href="#" class="button-collapse" data-activates="mobile-nav" data-sidenav="left" data-menuwidth="300" data-closeonclick="true"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li ng-if="nav.isLoggedIn()"><a>Hola {{nav.getUsername() | uppercase}}</a></li>
+      <li ng-if="nav.isLoggedIn()"><a>Hola {{nav.getUsername()}} <i class="material-icons right">person</i> </a></li>
       <li ng-if="!nav.isLoggedIn()"><a ui-sref="login">login</a></li>
-      <li><a ui-sref="employees">Empleados</a></li>
-      <li><a ui-sref="comics">comics</a></li>
-      <li ng-if="nav.isLoggedIn()"><a  ng-click="nav.logout();">Salir</a></li>
+      <li><a ui-sref="employees">Empleados <i class="material-icons right">group</i></a></li>
+      <li><a ui-sref="comics">comics <i class="material-icons right">flash_on</i></a></li>
+      <li ng-if="nav.isLoggedIn()"><a  ng-click="nav.logout();">Salir <i class="material-icons right">exit_to_app</i></a></li>
 
     </ul>
     <ul class="side-nav" id="mobile-nav">
-      <li ng-if="nav.isLoggedIn()">Hola {{nav.getUsername() | uppercase}}</li>
+      <li ng-if="nav.isLoggedIn()"><a> Hola {{nav.getUsername()}} <i class="material-icons right">person</i> </a></li>
 
       <li ng-if="!nav.isLoggedIn()"><a ui-sref="login">login</a></li>
-      <li><a ui-sref="employees">Empleados</a></li>
-      <li><a ui-sref="comics">comics</a></li>
-      <li ng-if="nav.isLoggedIn()"><a  ng-click="nav.logout();">Salir</a></li>
+      <li><a ui-sref="employees">Empleados <i class="material-icons right">group</i></a></li>
+      <li><a ui-sref="comics">comics <i class="material-icons right">flash_on</i></a></li>
+      <li ng-if="nav.isLoggedIn()"><a  ng-click="nav.logout();">Salir <i class="material-icons right">exit_to_app</i></a></li>
 
     </ul>
   </div>
