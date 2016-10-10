@@ -10,7 +10,8 @@
       return {
         login:  login,
         logout: logout,
-        isLoggedIn: isLoggedIn
+        isLoggedIn: isLoggedIn,
+        getUsername: getUsername
       };
 
       function login(user) {
@@ -21,7 +22,8 @@
               employees.forEach(employee=>{
                 if (user.username === employee.username && user.password === employee.password) {
                   $window.localStorage.isLoggedIn = 'true';
-                  $window.localStorage.user = String(user);
+
+                  $window.localStorage.user = String(JSON.stringify(user));
                   $state.go('home');
                   Materialize.toast('Bienvenido(a) '+ user.username, 4000);
                   result = true;
@@ -33,11 +35,10 @@
             });
           }else {
             let localEmployees = JSON.parse($window.localStorage.employees);
-            console.log(localEmployees);
             localEmployees.forEach(employee=>{
               if (user.username === employee.username && user.password === employee.password) {
                 $window.localStorage.isLoggedIn = 'true';
-                $window.localStorage.user = String(user);
+                $window.localStorage.user = String(JSON.stringify(user));
                 $state.go('home');
                 Materialize.toast('Bienvenido(a) '+ user.username, 4000);
 
@@ -58,6 +59,15 @@
 
       function isLoggedIn() {
         return ($window.localStorage.isLoggedIn === 'true');
+      }
+
+      function getUsername() {
+        if ($window.localStorage.user) {
+          let user = JSON.parse($window.localStorage.user);
+          return user.username;
+        }else {
+          return 'ddd';
+        }
       }
     }
 })();
