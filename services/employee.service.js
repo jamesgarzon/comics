@@ -4,12 +4,13 @@
   angular
   .module('comicsApp')
   .factory('Employee', employeeService);
-  employeeService.$inject = ['$http'];
+  employeeService.$inject = ['$http','$window'];
 
-  function employeeService($http) {
+  function employeeService($http, $window) {
     return {
       list:  list,
-      create: create
+      create: create,
+      isEmpty: isEmpty
     };
 
     function list() {
@@ -30,6 +31,14 @@
       .catch((err) => {
         return err;
       });
+    }
+
+    function isEmpty() {
+      if (!$window.localStorage.employees) {
+        return true;
+      }else {
+        return false;
+      }
     }
 
   }

@@ -46,7 +46,7 @@
 <div class="row">
   <div class="col s12 m6 l4" ng-repeat="comic in vm.comics | filter:vm.filter(vm.filterTitle) track by $index">
     <div class="card">
-      <a href="#comicModal"  modal ng-click="vm.selectComic(comic)">
+      <a href="#detailComicModal"  modal ng-click="vm.selectComic(comic)">
         <div class="card-image">
           <img ng-src="assets/images/comics/{{comic.id}}.jpg" height="250px">
           <span class="card-title"><b>{{comic.name | uppercase}}</b></span>
@@ -66,7 +66,7 @@
 
 
 <!-- Modal de detalle del comic -->
-<div id="comicModal" class="modal modal-fixed-footer">
+<div id="detailComicModal" class="modal modal-fixed-footer">
   <div class="modal-content">
     <div class="row">
       <div class="col m8 s12">
@@ -82,6 +82,8 @@
         <span class="yellow-text"><i class="material-icons">star</i></span>
         <span class="yellow-text"><i class="material-icons">star_half</i></span>
       </p>
+      <a href="" class=" waves-effect waves-green btn orange" ng-click="vm.openEditModal()">Editar <i class="material-icons">edit</i></a>
+
     </div>
   </div>
 
@@ -137,6 +139,47 @@
       <div class="center-align">
         <button class="btn waves-effect waves-light orange " type="submit" name="action">Crear
           <i class="material-icons right">done</i>
+        </button>
+      </div>
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <a href="" class=" modal-action modal-close waves-effect waves-green btn-flat">Regresar</a>
+  </div>
+</div>
+
+
+<!-- modal editar comic -->
+<div id="editComicModal" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    <h4>Editar Comic</h4>
+    <form class="col s12" ng-submit="vm.editComic(vm.selectedComic);">
+      <div class="row">
+        <div class="input-field col m6 s12">
+          <i class="material-icons prefix">accessibility</i>
+          <input id="selectedComicName" type="text" class="validate" ng-model="vm.selectedComic.name" required />
+          <label for="selectedComicName">Nombre</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <i class="material-icons prefix">business</i>
+          <input id="selectedComicCompany" type="text" class="validate" ng-model="vm.selectedComic.company" required />
+          <label for="selectedComicCompany">Editorial</label>
+        </div>
+        <div class="input-field col  m6 s12">
+          <i class="material-icons prefix">face</i>
+          <input id="selectedComicCompany" type="text" class="validate" ng-model="vm.selectedComic.author" required />
+          <label for="selectedComicCompany">Autor</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <textarea id="selectedComicDescription" class="materialize-textarea validate"  ng-model="vm.selectedComic.description" required></textarea>
+          <label for="selectedComicDescription">Textarea</label>
+        </div>
+      </div>
+      <div class="center-align">
+        <button class="btn waves-effect waves-light orange " type="submit" name="action">Actualizar
+          <i class="material-icons right">autorenew</i>
         </button>
       </div>
     </form>

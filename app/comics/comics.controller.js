@@ -90,6 +90,26 @@
       this.$window.localStorage.comics = String(JSON.stringify(this.comics));
     }
 
+    openEditModal(){
+      $('#detailComicModal').closeModal();
+      $('#editComicModal').openModal();
+    }
+
+    editComic(selectedComic){
+      this.comics.forEach(comic=>{
+        if (comic.id === selectedComic.id) {
+          comic.name = selectedComic.name;
+          comic.company = selectedComic.company;
+          comic.author = selectedComic.author;
+          comic.description = selectedComic.description;
+        }
+      });
+      this.$window.localStorage.comics = String(JSON.stringify(this.comics));
+      $('#editComicModal').closeModal();
+      $('#detailComicModal').openModal();
+
+    }
+
   }
 
   angular.module('comicsApp')
