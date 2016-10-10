@@ -29,6 +29,8 @@
 
     // Crea un nuevo usuario guardandolo en el localstorage
     createEmployee(newEmployee){
+      if (this.checkPassword(newEmployee.password)) {
+
       this.Employee.create(newEmployee)
       .then(employee=>{
         this.addEmployeeLocalStore(newEmployee);
@@ -38,6 +40,8 @@
       .catch((err) => {
         console.log(err);
       });
+    }
+
     }
 
     // Agrega un empleado al localStorage
@@ -52,6 +56,38 @@
           email: newEmployee.email
         });
       this.$window.localStorage.employees = String(JSON.stringify(this.employees));
+    }
+
+    checkPassword(password){
+      let check = true;
+      if (!this.hasMayus(password)) {
+        Materialize.toast('La contraseña debe tener minimo una mayúscula', 5000);
+        check = false;
+      }
+      if (!this.hasTwoNumbers(password)) {
+        Materialize.toast('La contraseña debe tener minimo dos (2) números', 5000);
+        check = false;
+      }
+      if (!this.hasSpecialChars(password)) {
+        Materialize.toast('La contraseña debe tener minimo un caracter especial', 5000);
+        check = false;
+      }
+      return check;
+    }
+
+    hasMayus(password){
+      let mayus = new RegExp('[A-Z]');
+      return mayus.test(password);
+    }
+
+    hasTwoNumbers(password){
+      let number = new RegExp('[0-9]{2}');
+      return number.test(password);
+    }
+
+    hasSpecialChars(password){
+      let specialChar = new RegExp('\\W');
+      return specialChar.test(password);
     }
 
   }
