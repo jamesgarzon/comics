@@ -5,9 +5,10 @@
   .module('comicsApp')
   .config(function ($stateProvider){
     $stateProvider
-    .state('comics', {
-      url: '/comics',
-      template: '<comics></comics>'
+    .state('login', {
+      url: '/login',
+      template: '<login></login>',
+      authenticate: false
     });
   });
 

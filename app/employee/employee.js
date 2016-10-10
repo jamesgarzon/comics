@@ -7,7 +7,8 @@
     $stateProvider
     .state('employee', {
       url: '/employee',
-      template: '<employee></employee>'
+      template: '<employee></employee>',
+      authenticate: true
     });
   });
 

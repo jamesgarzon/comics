@@ -2,10 +2,12 @@
   'use strict';
 
   class NavbarController {
-    constructor() {
-      // this.isLoggedIn = Auth.isLoggedIn;
-      // this.isAdmin = Auth.isAdmin;
-      // this.getCurrentUser = Auth.getCurrentUser;
+    constructor(Auth, $window) {
+      this.Auth = Auth;
+    }
+
+    logout(){
+      this.Auth.logout();
     }
 
   }

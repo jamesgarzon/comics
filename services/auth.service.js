@@ -4,27 +4,27 @@
   angular
     .module('comicsApp')
     .factory('Auth', authService);
-    authService.$inject = ['$window','$http'];
+    authService.$inject = ['$window','$http','$state'];
 
-    function authService($window, $http) {
+    function authService($window, $http, $state) {
       return {
         login:  login,
-        logout: logout
+        logout: logout,
+        isLoggedIn: isLoggedIn
       };
 
       function login(user) {
-
-      return $http.post('http://jsonplaceholder.typicode.com/posts', user)
-        .then(response=>{
-            return response.data;
-        })
-        .catch((err) => {
-          return err;
-        });
+          $window.localStorage.isLoggedIn = 'true';
+          $window.localStorage.user = String(user);
       }
 
       function logout() {
-        $window.localStorage.removeItem('isLogged');
+        $window.localStorage.removeItem('isLoggedIn');
+        $state.go('login');
+      }
+
+      function isLoggedIn() {
+        return ($window.localStorage.isLoggedIn === 'true');
       }
     }
 })();
