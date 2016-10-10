@@ -1,13 +1,11 @@
 (function(){
   'use strict';
 
-  // Controlador de la vista de comics
+  // Controlador de la vista de empleados
   class EmployeeComponent {
-    constructor($window, $state, Employee) {
+    constructor($window, Employee) {
       this.Employee = Employee;
       this.$window = $window;
-      this.$state = $state;
-
     }
 
     // llama las funciones listadas al cargar la vista
@@ -16,7 +14,7 @@
     }
 
 
-    // Llama el servicio de listar comics para traerlos a la vista
+    // Llama el servicio de listar empleados para traerlos a la vista
     list(){
       this.Employee.list()
       .then((employees) => {
@@ -27,6 +25,33 @@
           this.employees = JSON.parse(this.$window.localStorage.employees);
         }
       });
+    }
+
+    // Crea un nuevo usuario guardandolo en el localstorage
+    createEmployee(newEmployee){
+      this.Employee.create(newEmployee)
+      .then(employee=>{
+        this.addEmployeeLocalStore(newEmployee);
+        Materialize.toast('Se ha creado el empleado correctamente', 5000);
+        $('#newEmployeeModal').closeModal();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+
+    // Agrega un empleado al localStorage
+    addEmployeeLocalStore(newEmployee){
+      this.employees.push({
+          username: newEmployee.username,
+          password: newEmployee.password,
+          name: newEmployee.name,
+          lastname: newEmployee.lastname,
+          phone: newEmployee.phone,
+          address: newEmployee.address,
+          email: newEmployee.email
+        });
+      this.$window.localStorage.employees = String(JSON.stringify(this.employees));
     }
 
   }

@@ -3,10 +3,10 @@
 
   // Controlador de la vista de comics
   class ComicsComponent {
-    constructor($window, $state, Comic) {
+    constructor($window, Comic) {
       this.Comic = Comic;
       this.$window = $window;
-      this.$state = $state;
+
       $('.modal-trigger').leanModal();
       this.comments = [{
           user: 'Antonio Machado',
@@ -65,6 +65,7 @@
       };
     }
 
+    // Crea un nuevo comic guardandolo en el local storage
     createComic(newComic){
       newComic.id = 'default';
       this.Comic.create(newComic)

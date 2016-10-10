@@ -1,7 +1,17 @@
-<div class="container">
+<div class="container z-depth-2">
 
 <h1 class="center-align">Empleados</h1>
 
+<!-- filtros -->
+<div class="row">
+  <div class="input-field col m10 offset-m1">
+    <i class="material-icons prefix">search</i>
+    <input id="filter" type="text" ng-model="vm.filter" />
+    <label for="filter">Búsqueda</label>
+  </div>
+</div>
+
+<!-- tabla donde se listan los empleados -->
 <table>
   <thead>
     <tr>
@@ -10,19 +20,85 @@
       <th>Apellido</th>
       <th>Teléfono</th>
       <th>Dirección</th>
-      <th>Fecha de nacimiento</th>
+      <th>Email</th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="employee in vm.employees">
+    <tr ng-repeat="employee in vm.employees |filter:vm.filter track by $index">
       <td>{{employee.username}}</td>
       <td>{{employee.name}}</td>
       <td>{{employee.lastname}}</td>
       <td>{{employee.phone}}</td>
       <td>{{employee.address}}</td>
-      <td>{{employee.birthday | date}}</td>
+      <td>{{employee.email}}</td>
     </tr>
   </tbody>
 </table>
 
+<br>
+</div>
+<br>
+
+
+<!-- Boton para añadir empleados -->
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a href="#newEmployeeModal"  modal class="btn-floating btn-large red modal-close waves-effect waves-light">
+    <i class="material-icons">add</i>
+  </a>
+</div>
+
+<!-- modal nuevo empleado -->
+<div id="newEmployeeModal" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    <h4>Nuevo Employee</h4>
+    <form class="col s12" ng-submit="vm.createEmployee(vm.newEmployee);">
+      <div class="row">
+        <div class="input-field col m6 s12">
+          <i class="material-icons prefix">accessibility</i>
+          <input id="newEmployeeName" type="text" class="validate" ng-model="vm.newEmployee.username" required />
+          <label for="newEmployeeName">Nombre de usuario</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <i class="material-icons prefix">vpn_key</i>
+          <input id="newEmployeePassword" type="password" class="validate" ng-model="vm.newEmployee.password" required />
+          <label for="newEmployeePassword">Contraseña</label>
+        </div>
+        <div class="input-field col  m6 s12">
+          <i class="material-icons prefix">face</i>
+          <input id="newEmployeeName" type="text" class="validate" ng-model="vm.newEmployee.name" required />
+          <label for="newEmployeeName">Nombre</label>
+        </div>
+        <div class="input-field col  m6 s12">
+          <i class="material-icons prefix">face</i>
+          <input id="newEmployeeLastName" type="text" class="validate" ng-model="vm.newEmployee.lastname" required />
+          <label for="newEmployeeLastName">Apellido</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="newEmployeePhone" type="text" class="validate" ng-model="vm.newEmployee.phone" required />
+          <label for="newEmployeePhone">Teléfono</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <i class="material-icons prefix">place</i>
+          <input id="newEmployeeAddress" type="text" class="validate" ng-model="vm.newEmployee.address" required />
+          <label for="newEmployeeAddress">Dirección</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <i class="material-icons prefix">email</i>
+          <input id="newEmployeeEmail" type="email" class="validate" ng-model="vm.newEmployee.email" required />
+          <label for="newEmployeeEmail">Email</label>
+        </div>
+      </div>
+      <div class="center-align">
+        <button class="btn waves-effect waves-light orange " type="submit" name="action">Crear
+          <i class="material-icons right">done</i>
+        </button>
+      </div>
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <a href="" class=" modal-action modal-close waves-effect waves-green btn-flat">Regresar</a>
+  </div>
 </div>

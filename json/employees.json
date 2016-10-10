@@ -7,7 +7,7 @@
     "lastname": "GARZÓN OTÁLVARO",
     "phone": "554-55-67",
     "address":  "CARRERA 15 # 34-67",
-    "birthday": "1994-11-05T13:15:30Z"
+    "email": "james.garzon@udea.edu.co"
   },
   {
     "id": 2,
@@ -17,6 +17,6 @@
     "lastname": "",
     "phone": "555-55-55",
     "address":  "CARRERA 15 # 34-67",
-    "birthday": "1996-10-07T13:15:30Z"
+    "email": "admin@comics.com"
   }
 ]
